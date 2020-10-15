@@ -1,1 +1,5 @@
-Sprint planning poker
+This is a GIT submodule (containing the frontend) for the project Planning Poker.
+
+Please check the [root project](https://github.com/resultdoo/planning-poker) for the documentation.
+
+Made with :heart: at RESULT d.o.o.
