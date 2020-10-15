@@ -1,0 +1,42 @@
+#manage-users-container {
+    position: absolute;
+    bottom: 200px;
+    padding: 5px 20px 3px 10px;
+    background-color: var( --result-secondary-color );
+    border-radius: 0 7px 7px 0;
+}
+
+.user-row {
+    display: grid;
+    grid-template-columns: auto min-content;
+}
+
+.manage-user-title {
+    color: var( --result-main-color );
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.user-name {
+    user-select: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+}
+
+.btn-remove {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var( --result-secondary-color );
+}
+
+.user-remove {
+    justify-self: end;
+    font-size: 12px;
+    line-height: 20px;
+}

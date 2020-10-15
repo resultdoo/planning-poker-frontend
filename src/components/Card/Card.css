@@ -1,0 +1,68 @@
+#card-container {
+    border-radius: 5px;
+    background-color: var( --result-main-color );
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.card-top-left {
+    position: absolute;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 13px;
+    top: 3px;
+    left: 3px;
+    color: #f1f1f1;
+    background-color: var( --result-main-color );
+    user-select: none;
+}
+
+.card-bottom-right {
+    position: absolute;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 13px;
+    bottom: 3px;
+    right: 3px;
+    color: #f1f1f1;
+    background-color: var( --result-main-color );
+    user-select: none;
+}
+
+#card-face {
+    margin: 10px;
+    width: 80px;
+    height: 130px;
+    border-radius: 5px;
+    background-color: var( --result-main-color );
+    text-align: center;
+    line-height: 130px;
+    color: #f1f1f1;
+    font-size: 40px;
+    user-select: none;
+    border: 1px solid var( --result-secondary-color );
+}
+
+/* Mobile */
+@media only screen and ( max-width: 768px ) {
+    #card-face {
+        margin: 6px;
+        width: 70px;
+        height: 110px;
+        border-radius: 5px;    
+        line-height: 110px;
+        font-weight: 600;
+        font-size: 28px;
+    }
+}
+
+.card-hidden {
+    background-image: url('/images/result_symbol.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none !important;
+}

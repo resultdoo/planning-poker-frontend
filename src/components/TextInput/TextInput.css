@@ -1,0 +1,37 @@
+.text-input-container {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px #cfcfcf;
+    line-height: 40px;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+    top: -11px;
+    bottom: 10px;
+    left: 20px;
+    font-size: 11px;
+    color: var( --result-main-color );
+    opacity: 1;
+}
+
+.input-text {
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    padding-top: 5px;
+    outline: none;
+    width: calc( 100% - 16px );
+    height: 40px;
+    padding-left: 16px;
+    color: var( --result-secondary-color );
+}
+
+.floating-label {
+    position: absolute;
+    color: #cfcfcf;
+    pointer-events: none;
+    left: 20px;
+    top: 3px;
+    transition: 0.2s ease all;
+}

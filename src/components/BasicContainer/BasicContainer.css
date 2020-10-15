@@ -1,0 +1,123 @@
+.basic-page {
+    background-image: url( '/images/result_background.png' );
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 10% auto 10% 40px;
+}
+
+.footer-info {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1.1px;
+    font-size: 14px;
+    line-height: 40px;
+    text-transform: uppercase;
+    background-color: var( --result-main-color );
+}
+
+.basic-container {
+    padding: 50px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 5px 1px #888888;
+    background-color: #f9f9f9;
+    display: grid;
+    grid-gap: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.basic-back-btn {
+    color: var( --result-main-color );
+    font-size: 40px;
+    outline: none;
+    cursor: pointer;
+    justify-self: center;
+}
+
+.pp-logo {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.basic-result-logo {
+    align-self: end;
+    height: 50px;
+    background-image: url( '/images/result_logo.svg' );
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.basic-btn {
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    background-color: var( --result-main-color );
+    padding: 7px;
+    width: 100px;
+    outline: none;
+    border: none;
+}
+
+a.info-link {
+    color: white;
+    text-decoration: none;
+}
+
+a.info-link:active {
+    color: white;
+    text-decoration: none;
+}
+
+a.info-link:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a.info-link.big {
+    color: grey;
+    text-decoration: none;
+}
+
+a.info-link.big:active {
+    color: grey;
+    text-decoration: none;
+}
+
+a.info-link.big:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+span.love {
+    color: red;
+}
+
+/* Mobile */
+@media only screen and ( max-width: 750px ) {
+    .basic-container {
+        border-radius: 0px;
+        padding: 50px 0 50px 0;
+        box-shadow: none;
+        background-color: #f9f9f9;
+        display: grid;
+        grid-gap: 20px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .basic-page {
+        grid-template-rows: 0% auto 0% 40px;
+    }
+    .basic-back-btn {
+        margin-left: 20px;
+    }
+}

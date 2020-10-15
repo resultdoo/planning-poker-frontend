@@ -1,0 +1,7 @@
+.landing-page-actions {
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 70px;
+    justify-content: center;
+}

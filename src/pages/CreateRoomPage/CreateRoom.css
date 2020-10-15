@@ -1,0 +1,26 @@
+.create-game-warning {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: var( --result-main-color );
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    text-align: center;
+}
+
+.create-btn {
+    justify-self: center;
+}
+
+.leave-btn {
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 250px !important;
+}
+
+.create-game {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 40px;
+}
