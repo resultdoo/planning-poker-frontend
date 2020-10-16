@@ -34,6 +34,10 @@ button.info-close {
     top: 20px;
 }
 
+.info-link .big {
+    color: grey;
+}
+
 p.info-text-header {
     font-size: 45px;
     margin: 10px;
