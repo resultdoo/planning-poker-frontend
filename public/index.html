@@ -9,15 +9,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" />        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180468101-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag( 'js', new Date() );
-            gtag( 'config', 'UA-180468101-1' );
-        </script>
+        <% if (process.env.GOOGLE_ANALYTICS_TAG ) { %>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=%GOOGLE_ANALYTICS_TAG%"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag( 'js', new Date() );
+                gtag( 'config', '%GOOGLE_ANALYTICS_TAG%' );
+            </script>    
+        <% } %>
         <style>
             body, html {
                 min-width: 100%;
