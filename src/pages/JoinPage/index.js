@@ -39,7 +39,7 @@ const JoinPage = ( { match } ) => {
 		},
 		onError: ( error ) => {
 			setErrorMessage( 'Room does not exist or has expired!' )
-			console.log( error )
+			console.error( `An error occured while trying to join room: `, error )
 		}
 	} )
 

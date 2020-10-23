@@ -11,12 +11,12 @@ const BigInfo = () => (
         </p>
         <p>-</p>
         <p className="info-text-header">
-            <a class="info-link big" href="https://github.com/resultdoo/planning-poker"><i className="fab fa-github"></i></a>
+            <a className="info-link big" href="https://github.com/resultdoo/planning-poker"><i className="fab fa-github"></i></a>
         </p>
         <p>Download the source code and run your own instance at your company or add something to the project.</p>
         <p>-</p>
         <p className="info-text-header">
-            <a class="info-link big" href="https://bostjan-cigan.medium.com/developing-scrum-poker-with-hasura-graphql-engine-a-time-cost-comparison-28fbeefeea7d"><i className="fab fa-medium"></i></a>
+            <a className="info-link big" href="https://bostjan-cigan.medium.com/developing-scrum-poker-with-hasura-graphql-engine-a-time-cost-comparison-28fbeefeea7d"><i className="fab fa-medium"></i></a>
         </p>
         <p>
             Read more about how we developed this app and how Hasura speeds up development time.

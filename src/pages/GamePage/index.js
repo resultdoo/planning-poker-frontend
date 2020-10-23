@@ -152,7 +152,6 @@ const GamePage = ( { match } ) => {
 	const [ isMenuOpen, toggleMenu ] = useState( false )
 	const [ isAllowedToAddCard, toggleIsAllowedToAddCard ] = useState( true )
 	const [ showCards, toggleShowCards ] = useState( false )
-	// const [ manageUsersOverlay, toggleManageUsersOverlay ] = useState( false )
 
 	//  UseEffects
 	useEffect( () => {
@@ -205,7 +204,7 @@ const GamePage = ( { match } ) => {
 
 	function showAllCards() {
 		toggleShowCards( !showCards )
-		if ( isAdmin ) {
+		if ( isAdmin && showCards != null ) {
 			toggleCards( {
 				variables: {
 					roomCode: match?.params?.id,
@@ -290,7 +289,6 @@ const GamePage = ( { match } ) => {
 			<div className="landscape-warning-container">
 				<LandscapeBlocker />
 			</div>
-			{/* { manageUsersOverlay ? ( <ManageUsers users={ boardCards } /> ) : null } */}
 			<div className={ getInfoClass() }>
 				<div className='info-text'><BigInfo /></div>
 				<button type='button' className='info-close' onClick={ () => toggleInfo( !isInfoOpen ) }><i className="fas fa-times-circle"></i></button>
@@ -326,7 +324,7 @@ const GamePage = ( { match } ) => {
 							? ( <div className='error-message'>Game server can not be reached. Please try refreshing your page.</div> )
 							: boardCards.map( ( item ) => (
 								<CardsOnTable
-									key={ `${ item?.name }-${ item?.cardValue }` }
+									key={ `${ item?.cardId }-${ item?.cardValue }` }
 									name={ item?.name }
 									face={ item?.cardValue }
 									isShown={ item.showCard }
@@ -345,15 +343,12 @@ const GamePage = ( { match } ) => {
 					>
 						Show Cards
 					</button>
-					{/* <button type='button' className='btn-admin' onClick={
-                        () => toggleManageUsersOverlay( !manageUsersOverlay )
-                    }>Manage users</button> */}
 				</div>
 			) : null }
 			<div className={ `game-page-deck ${ gameDisabled() }` }>
 				{ fullDeck.map( ( card ) => (
 					<Card
-						key={ card }
+						key={ `card-play-deck-${ card }` }
 						face={ card }
 						isShown
 						onClickHandle={ isAllowedToAddCard ? addCartToBoard : () => {} }
